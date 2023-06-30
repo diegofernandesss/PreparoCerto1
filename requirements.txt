@@ -7,7 +7,7 @@ Flask-Migrate==4.0.4
 psycopg2===2.9.6
 Werkzeug==2.2.3
 PyJWT ===2.7.0
-python-dotenv===1.0.0
+python-dotenv==0.21.1
 password-strength===0.0.3.post2
 validate_docbr===1.10.0
 gunicorn==19.7.1
