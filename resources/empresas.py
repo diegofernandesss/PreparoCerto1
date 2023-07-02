@@ -153,7 +153,7 @@ class EmpresaId(Resource):
 
     except IntegrityError:
       codigo = Message(1, "CNPJ ja cadastrado no sistema")
-      return marshal(codigo, msgFields)
+      return marshal(codigo, msgFields), 400
 
     except:
       logger.error("Error ao atualizar a empresa")
