@@ -40,7 +40,7 @@ class FichaTecnicaOperacional(Resource):
     return marshal(data, fichaTecnicaOperacionalFields), 200
 
 class FichaTecnicaGerencial(Resource):
-  def get(self, id):
+  def get(self, id, perImposto, perLucro):
     args = parser.parse_args()
 
     preparacaoIngrediente = PreparacaoIngrediente.query.filter_by(preparacao_id=id).all()
@@ -56,7 +56,7 @@ class FichaTecnicaGerencial(Resource):
 
     valorPorcao = total / preparacao.numPorcoes
 
-    valorSugerido = calcularValorSugerido(valorPorcao, args['perImposto'], args['perLucro'])
+    valorSugerido = calcularValorSugerido(valorPorcao, float(perImposto), float(perLucro))
 
     data = {
       "ingredientes": preparacaoIngrediente,

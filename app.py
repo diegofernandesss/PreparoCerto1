@@ -75,7 +75,7 @@ api.add_resource(CardapioPreapracaoId, '/cardapio_preparacao/<int:id>')
 api.add_resource(FichaTecnicaOperacional, '/fichatecnicaoperacional/<int:id>')
 
 #Ficha Tecnica Gerencial
-api.add_resource(FichaTecnicaGerencial, '/fichatecnicagerencial/<int:id>')
+api.add_resource(FichaTecnicaGerencial, '/fichatecnicagerencial/<int:id>/<string:perImposto>/<string:perLucro>')
 
 #Unidade Medida
 api.add_resource(Unidade, '/unidade')
