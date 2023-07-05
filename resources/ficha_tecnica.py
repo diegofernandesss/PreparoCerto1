@@ -41,7 +41,6 @@ class FichaTecnicaOperacional(Resource):
 
 class FichaTecnicaGerencial(Resource):
   def get(self, id, perImposto, perLucro):
-    args = parser.parse_args()
 
     preparacaoIngrediente = PreparacaoIngrediente.query.filter_by(preparacao_id=id).all()
     preparacao = Preparacao.query.get(id)
